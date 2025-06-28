@@ -3,7 +3,9 @@ const app = express()
 const studentRouter =  require('./routes/students.route')
 
 //Server Start
-app.listen(3000)
+app.listen(3000,() => {
+  console.log('Server Started Successfully')
+})
 
 //Application middleware
 app.set('view engine','ejs')
