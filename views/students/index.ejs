@@ -1,0 +1,35 @@
+<%- include('../header') -%>
+  <!--begin::Row-->
+  <h3>All Students</h3>
+  <hr>
+  <table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Sr.</th>
+            <th>Name</th>
+            <th>Father</th>
+            <th>Mother</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% var sr = 1 %>
+        <% students.forEach(student => { %>
+            <tr>
+                <td><%= sr++ %></td>
+                <td><%= student.name %></td>
+                <td><%= student.father %></td>
+                <td><%= student.mother %></td>
+                <td>
+                    <a href="/students/edit/<%= student.id %>" class="btn btn-warning">Edit</a>
+                </td>
+                <td>
+                    <a href="/students/delete/<%= student.id %>" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+  </table>
+  <!--end::Row-->
+<%- include('../footer') -%>

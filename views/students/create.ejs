@@ -1,0 +1,16 @@
+<%- include('../header') -%>
+<h3>New Student</h3>
+<hr>
+<form action="/store" method="post">
+    <label for="">Student Name</label>
+    <input type="text" class="form-control my-2" name="name">
+    <label for="">Father Name</label>
+    <input type="text" class="form-control my-2" name="father">
+    <label for="">Mother Name</label>
+    <input type="text" class="form-control my-2" name="mother">
+    <div class="d-flex align-items-center mt-4">
+        <input type="submit" value="Save" class="btn btn-success me-3">
+        <a href="/" class="btn btn-danger"><i class="bi bi-arrow-left"></i>Go Back</a>
+    </div>
+</form>
+<%- include('../footer') -%>
